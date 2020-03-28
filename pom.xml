@@ -14,7 +14,6 @@
             <reportOutputDirectory>${project.reporting.outputDirectory}/javadoc</reportOutputDirectory>
         </configuration>
             </plugin>
-           
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
             	<artifactId>findbugs-maven-plugin</artifactId>
@@ -53,6 +52,21 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.7.1</version>
             </plugin>
+            <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>1.2.1</version>
+    <executions>
+        <execution>
+           <goals>
+            <goal>java</goal>
+           </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <mainClass>fr.uvsq21920965.pglp42.CalculatriceRPN</mainClass>
+    </configuration>
+</plugin>
 </plugins>
  </build>
 </project>

@@ -3,12 +3,12 @@ package genericCommandTest;
 import org.junit.Rule;
 import org.junit.Test;
 
-import fr.uvs2920965.pglp42.genericCommand.Quit;
+import fr.uvsq21920965.pglp42.genericCommand.Quit;
 
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 /**
  * Quite teste Classe.
- * @author Sarra.belmahdi.
+ * @author Sarra Belmahdi.
  *
  */
 public class QuitTest {

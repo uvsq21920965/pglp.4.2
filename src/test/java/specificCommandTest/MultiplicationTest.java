@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import fr.uvs2920965.pglp42.specificCommande.Multiplication;
+import fr.uvsq21920965.pglp42.specificCommande.Multiplication;
 
 /**
  * Multiplication Classe.

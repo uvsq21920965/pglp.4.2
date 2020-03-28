@@ -7,8 +7,8 @@ import java.util.Stack;
 
 import org.junit.Test;
 
-import fr.uvs2920965.pglp42.ExpressionException;
-import fr.uvs2920965.pglp42.MoteurRPN;
+import fr.uvsq21920965.pglp42.ExpressionException;
+import fr.uvsq21920965.pglp42.MoteurRPN;
 
 /**
  * MoteurRPNTest Classe.

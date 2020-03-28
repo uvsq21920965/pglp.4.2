@@ -1,11 +1,12 @@
-package fr.uvs2920965.pglp42;
+package fr.uvsq21920965.pglp42;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-import fr.uvs2920965.pglp42.genericCommand.GenericCommand;
-import fr.uvs2920965.pglp42.genericCommand.Quit;
-import fr.uvs2920965.pglp42.genericCommand.Undo;
+import fr.uvsq21920965.pglp42.genericCommand.GenericCommand;
+import fr.uvsq21920965.pglp42.genericCommand.Quit;
+import fr.uvsq21920965.pglp42.genericCommand.Undo;
 
 /**
  * Interpreteur Class pour traiter generiques Commands.

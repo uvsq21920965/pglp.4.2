@@ -7,7 +7,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 
-import fr.uvs2920965.pglp42.Interpreteur;
+import fr.uvsq21920965.pglp42.Interpreteur;
 
 /**
  * Classe pour tester InterpreteurClasse.

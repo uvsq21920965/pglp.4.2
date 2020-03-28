@@ -1,13 +1,14 @@
-package fr.uvs2920965.pglp42;
+package fr.uvsq21920965.pglp42;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
-import fr.uvs2920965.pglp42.specificCommande.Addition;
-import fr.uvs2920965.pglp42.specificCommande.Division;
-import fr.uvs2920965.pglp42.specificCommande.Multiplication;
-import fr.uvs2920965.pglp42.specificCommande.Soustraction;
-import fr.uvs2920965.pglp42.specificCommande.SpecificCommand;
+import fr.uvsq21920965.pglp42.specificCommande.Addition;
+import fr.uvsq21920965.pglp42.specificCommande.Division;
+import fr.uvsq21920965.pglp42.specificCommande.Multiplication;
+import fr.uvsq21920965.pglp42.specificCommande.Soustraction;
+import fr.uvsq21920965.pglp42.specificCommande.SpecificCommand;
 /**
  * 	Classe MoteurRPN pour traiter specific Commands.
  * @author Sarra Belmahdi.
@@ -85,7 +86,7 @@ public class MoteurRPN extends Interpreteur{
       operande1 = operandesPile.pop();
       operande2 = operandesPile.pop();
       operation=sCommands.get(op);
-      stockage(operation.apply(operande1, operande2));
+      stockage(operation.apply(operande2, operande1));
     } 
     else {
     	throw new ExpressionException("expression arithmethique non valide");
