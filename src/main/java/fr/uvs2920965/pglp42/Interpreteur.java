@@ -8,7 +8,7 @@ import fr.uvs2920965.pglp42.genericCommand.Quit;
 import fr.uvs2920965.pglp42.genericCommand.Undo;
 
 /**
- * Interpreteur Class pour interpreter generiques Commands.
+ * Interpreteur Class pour traiter generiques Commands.
  * @author Sarra Belmahdi.
  *
  */
@@ -28,7 +28,7 @@ public class Interpreteur {
 
   /**
    * Constructeur.	  
-   * @param operandesPileAtt pile pour empiler les operandes.
+   * @param operandesPileAtt pile pour empiler les operandes.z
    */
   public Interpreteur(Stack<Integer> operandesPileAtt) {
 	    operandesPile = operandesPileAtt;
@@ -37,10 +37,17 @@ public class Interpreteur {
 	    gCommands.put("exit",new Quit());
 	    gCommands.put("undo",new Undo(operandesPile,allPiles));
 	  }
-
   /**
-   * methode pour interpreter les generiques commandes selon l'operation.
-   * @param operation nom de la commande genirique.
+   * methode pour acceder à la pile actuelle.
+   * @return la pile des operandes.
+   */
+  public Stack<Integer> getOperandesPile() {
+	return operandesPile;
+  }
+
+/**
+   * methode pour executer les generiques commandes selon l'operation.
+   * @param operation le nom de la commande genirique.
    */
   public void interprete(String operation) {
     GenericCommand gc =gCommands.get(operation);

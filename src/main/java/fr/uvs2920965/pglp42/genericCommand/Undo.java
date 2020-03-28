@@ -31,9 +31,7 @@ public class Undo implements  GenericCommand{
    * methode pour annuler la derniere operation effectée.
    */
   public void apply() {
-    while (!operandesPile.empty()) {
-     operandesPile.pop();
-    }
+    operandesPile.clear();
     if (! allPiles.empty()) {
       allPiles.pop();
         if (! allPiles.empty()) {

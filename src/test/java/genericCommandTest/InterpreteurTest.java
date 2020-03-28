@@ -16,7 +16,7 @@ import fr.uvs2920965.pglp42.Interpreteur;
  */
 public class InterpreteurTest {
   Stack<Integer> operandesPile=new Stack<Integer>();
-  Interpreteur inter=new Interpreteur(operandesPile);
+  Interpreteur inter;
   @Rule
   public final ExpectedSystemExit exit = ExpectedSystemExit.none();
   @Test
@@ -24,11 +24,10 @@ public class InterpreteurTest {
 	  operandesPile.push(1);
 	  operandesPile.push(2);
 	  operandesPile.push(3);
+	  inter=new Interpreteur(operandesPile);
+	  inter.storeLastOperation(operandesPile);
 	  inter.interprete("undo");
-	  Stack<Integer> expectedPile=new Stack<Integer>();
-	  expectedPile.push(1);
-	  expectedPile.push(2);
-	  assertEquals(operandesPile,expectedPile);
+	  assertEquals(inter.getOperandesPile(),new Stack<Integer>());
 	  exit.expectSystemExitWithStatus(0);
 	  inter.interprete("exit");
 	  System.out.println("This is NEVER executed.");

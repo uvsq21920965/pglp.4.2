@@ -1,15 +1,24 @@
 package fr.uvs2920965.pglp42.specificCommande;
-
+/**
+ * Division Classe.
+ * @author Sarra Belmahdi.
+ *
+ */
 public class Division implements  SpecificCommand {
-    public Division() {
-	}
+  /**
+   * Constructeur.
+   */
+  public Division() {
+  }
 
-    public int apply(int a,int b) {
-    	if(b!=0) {
-	        return a / b;
-	      }
-	      else{
-		    throw new ArithmeticException("division sur zéro");
-	      }
-	    }
+  /**
+   * methode pour diviser deux entiers.
+   */
+  public int apply(int a,int b) throws ArithmeticException  {
+    if(b==0) {
+      throw new ArithmeticException("division sur zéro");
+    }else{
+    	return a / b;
+    }
+  }
 }

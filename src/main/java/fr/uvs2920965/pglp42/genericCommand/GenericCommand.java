@@ -6,9 +6,9 @@ package fr.uvs2920965.pglp42.genericCommand;
  *
  */
 public interface GenericCommand {
-    /**
-     * appliquer la commande genirique exit/undo.
-     */
-	public void apply();
+  /**
+   * appliquer la commande genirique exit/undo.
+   */
+  public void apply();
 
 }
