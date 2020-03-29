@@ -47,7 +47,7 @@ public class SaisieRPN {
     System.out.println("");
     System.out.println("Ecrire votre operation post-fixée svp ,'exit' pour "
       + "sortir ou 'undo' pour annuler une operation: ");
-    Scanner scan = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in, "UTF-8");
     // attribut entier pour recuperer les operandes entrer par l'utilisateur
     int number;
     // attribut string pour recuperer les operations entrer par l'utilisateur

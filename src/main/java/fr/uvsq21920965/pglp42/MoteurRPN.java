@@ -51,13 +51,14 @@ public class MoteurRPN extends Interpreteur {
    * @return le contenue  de la pile.
    */
   public String getAllOperandes() {
-    String all = "[";
+    StringBuilder all = new StringBuilder();
+    all.append("[");
     if (!operandesPile.isEmpty()) {
       for (int i = 0; i < operandesPile.size(); i++) {
         if (i == 0) {
-          all += operandesPile.get(i);
+          all.append(operandesPile.get(i));
         } else {
-          all += " ," + operandesPile.get(i);
+          all.append(" ," + operandesPile.get(i));
         }
       }
     }

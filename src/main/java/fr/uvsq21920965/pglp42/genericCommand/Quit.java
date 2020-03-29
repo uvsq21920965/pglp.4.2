@@ -16,6 +16,6 @@ public class Quit implements  GenericCommand {
    * methode pour fermer le programme.
    */
   public void apply() {
-    System.exit(0);
+    Runtime.getRuntime().exit(0);
   }
 }
