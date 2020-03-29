@@ -1,21 +1,20 @@
 package fr.uvsq21920965.pglp42;
 
+import fr.uvsq21920965.pglp42.specificommand.Addition;
+import fr.uvsq21920965.pglp42.specificommand.Division;
+import fr.uvsq21920965.pglp42.specificommand.Multiplication;
+import fr.uvsq21920965.pglp42.specificommand.Soustraction;
+import fr.uvsq21920965.pglp42.specificommand.SpecificCommand;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
-import fr.uvsq21920965.pglp42.specificCommande.Addition;
-import fr.uvsq21920965.pglp42.specificCommande.Division;
-import fr.uvsq21920965.pglp42.specificCommande.Multiplication;
-import fr.uvsq21920965.pglp42.specificCommande.Soustraction;
-import fr.uvsq21920965.pglp42.specificCommande.SpecificCommand;
 
 /**
  * Classe MoteurRPN pour traiter specific Commands.
  * @author Sarra Belmahdi.
  *
  */
-public class MoteurRPN extends Interpreteur {
+public class MoteurRpn extends Interpreteur {
   /**
    * pile pour empiler les operandes.
    */
@@ -24,20 +23,22 @@ public class MoteurRPN extends Interpreteur {
   /**
    *  map pour enregistrer les specifiques commandes.
    */
-  private Map<String, SpecificCommand> sCommands;
+  private Map<String, SpecificCommand> scCommands;
   /**
    * Constructeur.
    * @param operandesPileAtt pile pour empiler les operandes.
    */
-  public MoteurRPN(final Stack<Integer> operandesPileAtt) {
+
+  public MoteurRpn(final Stack<Integer> operandesPileAtt) {
     super(operandesPileAtt);
     operandesPile = operandesPileAtt;
-    sCommands = new HashMap<String, SpecificCommand>();
-    sCommands.put("+", new Addition());
-    sCommands.put("-", new Soustraction());
-    sCommands.put("*", new Multiplication());
-    sCommands.put("/", new Division());
+    scCommands = new HashMap<String, SpecificCommand>();
+    scCommands.put("+", new Addition());
+    scCommands.put("-", new Soustraction());
+    scCommands.put("*", new Multiplication());
+    scCommands.put("/", new Division());
   }
+
   /**
    * methode pour acceder à la pile actuelle.
    * @return la pile des operandes.
@@ -71,22 +72,22 @@ public class MoteurRPN extends Interpreteur {
    */
   public void stockage(final int a) {
     this.getOperandesPile().push(a);
-   this.storeLastOperation(this.getOperandesPile());
+    this.storeLastOperation(this.getOperandesPile());
   }
 
   /**
    * methode pour executer les specifiques commandes selon l'operation.
    * @param op le nom de specifique commande.
-   * @throws ExpressionException exception déclanchée
-   * si l'expression post-fixé est erronée.
+   * @throws ExpressionException exception déclanchée si l'expression post-fixé est erronée.
    */
   public void calcule(final String op)throws ExpressionException {
-    int operande1, operande2;
+    int operande1;
+    int operande2;
     SpecificCommand operation = null;
     if (operandesPile.size() >= 2) {
       operande1 = operandesPile.pop();
       operande2 = operandesPile.pop();
-      operation = sCommands.get(op);
+      operation = scCommands.get(op);
       stockage(operation.apply(operande2, operande1));
     } else {
       throw new ExpressionException("expression arithmethique non valide");

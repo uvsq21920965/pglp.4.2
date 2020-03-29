@@ -1,4 +1,4 @@
-package fr.uvsq21920965.pglp42.genericCommand;
+package fr.uvsq21920965.pglp42.genericommand;
 
 import java.util.Stack;
 /**
@@ -6,6 +6,7 @@ import java.util.Stack;
  * @author Sarra Belmahdi.
  *
  */
+
 public class Undo implements  GenericCommand {
   /**
    * pile pour empiler les operandes.
@@ -23,7 +24,7 @@ public class Undo implements  GenericCommand {
    * @param allPilesAtt  pile pour empiler l'historiques des piles.
    */
   public Undo(final Stack<Integer> operandesPileAtt,
-    final Stack<Stack<Integer>> allPilesAtt) {
+      final Stack<Stack<Integer>> allPilesAtt) {
     operandesPile = operandesPileAtt;
     allPiles = allPilesAtt;
   }
@@ -35,16 +36,16 @@ public class Undo implements  GenericCommand {
     operandesPile.clear();
     if (!allPiles.empty()) {
       allPiles.pop();
-        if (!allPiles.empty()) {
-          Stack<Integer> actuelPile =  allPiles.peek();
-          for (int i = 0; i < actuelPile.size(); i++) {
-            if (actuelPile.get(i) != null) {
-              operandesPile.push(actuelPile.get(i));
-            }
+      if (!allPiles.empty()) {
+        Stack<Integer> actuelPile =  allPiles.peek();
+        for (int i = 0; i < actuelPile.size(); i++) {
+          if (actuelPile.get(i) != null) {
+            operandesPile.push(actuelPile.get(i));
           }
         }
-      } else {
-        System.out.println("il n'y a pas une operation à annuler");
+      }
+    } else {
+      System.out.println("il n'y a pas une operation à annuler");
     }
   }
 }

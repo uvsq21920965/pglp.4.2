@@ -1,12 +1,11 @@
 package fr.uvsq21920965.pglp42;
 
+import fr.uvsq21920965.pglp42.genericommand.GenericCommand;
+import fr.uvsq21920965.pglp42.genericommand.Quit;
+import fr.uvsq21920965.pglp42.genericommand.Undo;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
-import fr.uvsq21920965.pglp42.genericCommand.GenericCommand;
-import fr.uvsq21920965.pglp42.genericCommand.Quit;
-import fr.uvsq21920965.pglp42.genericCommand.Undo;
 
 /**
  * Interpreteur Class pour traiter generiques Commands.
@@ -26,7 +25,7 @@ public class Interpreteur {
   /**
    * map pour enregistrer les geniriques commandes.
    */
-  private Map<String, GenericCommand> gCommands;
+  private Map<String, GenericCommand> gcCommands;
 
   /**
    * Constructeur.
@@ -35,9 +34,9 @@ public class Interpreteur {
   public Interpreteur(final Stack<Integer> operandesPileAtt) {
     operandesPile = operandesPileAtt;
     allPiles = new Stack<Stack<Integer>>();
-    gCommands = new HashMap<String, GenericCommand>();
-    gCommands.put("exit", new Quit());
-    gCommands.put("undo", new Undo(operandesPile, allPiles));
+    gcCommands = new HashMap<String, GenericCommand>();
+    gcCommands.put("exit", new Quit());
+    gcCommands.put("undo", new Undo(operandesPile, allPiles));
   }
 
   /**
@@ -53,7 +52,7 @@ public class Interpreteur {
    * @param operation le nom de la commande genirique.
    */
   public void interprete(final String operation) {
-    GenericCommand gc = gCommands.get(operation);
+    GenericCommand gc = gcCommands.get(operation);
     gc.apply();
   }
 

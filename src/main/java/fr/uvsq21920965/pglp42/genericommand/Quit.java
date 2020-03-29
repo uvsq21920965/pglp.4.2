@@ -1,4 +1,4 @@
-package fr.uvsq21920965.pglp42.genericCommand;
+package fr.uvsq21920965.pglp42.genericommand;
 
 /**
  * quite Class pour quiter le programme.

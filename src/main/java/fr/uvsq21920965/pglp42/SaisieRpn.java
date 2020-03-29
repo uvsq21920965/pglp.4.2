@@ -8,7 +8,7 @@ import java.util.Stack;
  * @author Sarra Belmahdi.
  *
  */
-public class SaisieRPN {
+public class SaisieRpn {
   /**
    * pile pour empiler les operandes.
    */
@@ -17,14 +17,14 @@ public class SaisieRPN {
   /**
    * reference au objet mrpn.
    */
-  private MoteurRPN mrpn;
+  private MoteurRpn mrpn;
 
   /**
    * Constructeur.
    */
-  public SaisieRPN() {
+  public SaisieRpn() {
     operandesPile = new Stack<Integer>();
-    mrpn = new MoteurRPN(operandesPile);
+    mrpn = new MoteurRpn(operandesPile);
   }
 
   /**
@@ -36,9 +36,9 @@ public class SaisieRPN {
   }
   /**
    * methode qui manipule la saisie d'utilisateur.
-   * @throws ExpressionException exception déclanchée.
-   * si l'expression post-fixée est erronée.
+   * @throws ExpressionException exception déclanchée si l'expression post-fixée est erronée.
    */
+
   public void interactUser() throws ExpressionException {
     System.out.println("");
     System.out.println("-------------------------------------------------");
@@ -46,7 +46,7 @@ public class SaisieRPN {
     System.out.println("-------------------------------------------------");
     System.out.println("");
     System.out.println("Ecrire votre operation post-fixée svp ,'exit' pour "
-      + "sortir ou 'undo' pour annuler une operation: ");
+        + "sortir ou 'undo' pour annuler une operation: ");
     Scanner scan = new Scanner(System.in, "UTF-8");
     // attribut entier pour recuperer les operandes entrer par l'utilisateur
     int number;
@@ -64,14 +64,13 @@ public class SaisieRPN {
           }
           mrpn.interprete(op);
         } else {
-              if (!op.equals("+") && !op.equals("-")
-                && !op.equals("/") && !op.equals("*")) {
-                System.out.println("Operation Invalide");
-              } else {
-                mrpn.calcule(op);
-              }
-            }
+          if (!op.equals("+") && !op.equals("-") && !op.equals("/") && !op.equals("*")) {
+            System.out.println("Operation Invalide");
+          } else {
+            mrpn.calcule(op);
           }
+        }
+      }
       System.out.println(mrpn.getAllOperandes());
     }
   }

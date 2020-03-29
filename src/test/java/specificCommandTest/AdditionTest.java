@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import fr.uvsq21920965.pglp42.specificCommande.Addition;
+import fr.uvsq21920965.pglp42.specificommand.Addition;
 
 /**
  * Addition Classe.

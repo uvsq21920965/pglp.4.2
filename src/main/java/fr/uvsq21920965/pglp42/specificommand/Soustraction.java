@@ -1,4 +1,4 @@
-package fr.uvsq21920965.pglp42.specificCommande;
+package fr.uvsq21920965.pglp42.specificommand;
 
 /**
  * Soustraction Classe.
@@ -11,6 +11,7 @@ public class Soustraction implements  SpecificCommand {
    */
   public Soustraction() {
   }
+
   /**
    * methode pour soustraire deux entiers.
    * @param a premiere operande.

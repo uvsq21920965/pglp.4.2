@@ -8,7 +8,7 @@ import java.util.Stack;
 import org.junit.Test;
 
 import fr.uvsq21920965.pglp42.ExpressionException;
-import fr.uvsq21920965.pglp42.MoteurRPN;
+import fr.uvsq21920965.pglp42.MoteurRpn;
 
 /**
  * MoteurRPNTest Classe.
@@ -24,7 +24,7 @@ public class MoteurRPNTest {
 		operandesPile.push(1);
 		operandesPile.push(2);
 		operandesPile.push(3);
-		MoteurRPN mrpn = new MoteurRPN(operandesPile);
+		MoteurRpn mrpn = new MoteurRpn(operandesPile);
 		assertEquals(mrpn.getOperandesPile(),operandesPile);;
 	}
 
@@ -33,7 +33,7 @@ public class MoteurRPNTest {
 		operandesPile.push(1);
 		operandesPile.push(2);
 		operandesPile.push(3);
-		MoteurRPN mrpn = new MoteurRPN(operandesPile);
+		MoteurRpn mrpn = new MoteurRpn(operandesPile);
 		assertEquals(mrpn.getAllOperandes(),"[1 ,2 ,3]");
 	}
 
@@ -42,7 +42,7 @@ public class MoteurRPNTest {
 		operandesPile.push(1);
 		operandesPile.push(2);
 		operandesPile.push(3);
-		MoteurRPN mrpn = new MoteurRPN(operandesPile);
+		MoteurRpn mrpn = new MoteurRpn(operandesPile);
 		int a = 4;
 		mrpn.stockage(a);
 		assertTrue(mrpn.getOperandesPile().contains(4));
@@ -55,7 +55,7 @@ public class MoteurRPNTest {
 		operandesPile.push(1);
 		operandesPile.push(2);
 		operandesPile.push(3);
-		MoteurRPN mrpn = new MoteurRPN(operandesPile);
+		MoteurRpn mrpn = new MoteurRpn(operandesPile);
 		mrpn.calcule("+");
 		assertTrue(mrpn.getOperandesPile().contains(5));
 		expectedPile.push(1);

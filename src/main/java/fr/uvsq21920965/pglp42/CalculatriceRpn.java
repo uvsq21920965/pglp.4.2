@@ -5,7 +5,7 @@ package fr.uvsq21920965.pglp42;
  * @author Sarra Belmahdi.
  *
  */
-public enum CalculatriceRPN {
+public enum CalculatriceRpn {
   /**
    * main programme.
    */
@@ -13,21 +13,20 @@ public enum CalculatriceRPN {
 
   /**
    * methode pour executer.
-   * @throws ExpressionException exception déclanchée
-   * si l'expression post-fixé est erronée.
+   * @throws ExpressionException exception déclanchée si l'expression post-fixé est erronée.
+   *
    */
   public void execute() throws ExpressionException {
-    SaisieRPN srpn = new SaisieRPN();
+    SaisieRpn srpn = new SaisieRpn();
     srpn.interactUser();
   }
 
   /**
    * main programme.
    * @param args main program args.
-   * @throws ExpressionException exception déclanchée.
-   * si l'expression post-fixée est erronée.
+   * @throws ExpressionException exception déclanchée si l'expression post-fixée est erronée.
    */
   public static void main(final String[] args)throws ExpressionException {
-    CalculatriceRPN.MAIN.execute();
+    CalculatriceRpn.MAIN.execute();
   }
 }
