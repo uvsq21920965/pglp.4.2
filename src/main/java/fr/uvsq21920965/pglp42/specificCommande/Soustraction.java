@@ -13,8 +13,11 @@ public class Soustraction implements  SpecificCommand {
   }
   /**
    * methode pour soustraire deux entiers.
+   * @param a premiere operande.
+   * @param b deuxieme operande.
+   * @return le resultat de la soustraction.
    */
-  public int apply(int a,int b) {
-    return a-b;
+  public int apply(final int a, final int b) {
+    return a - b;
   }
 }

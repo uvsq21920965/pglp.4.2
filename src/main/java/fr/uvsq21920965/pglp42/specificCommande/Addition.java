@@ -10,12 +10,15 @@ public class Addition implements  SpecificCommand {
    * Constructeur.
    */
   public Addition() {
-	}
+  }
 
   /**
    * methode pour aditionner deux entiers.
+   * @param a premiere operande.
+   * @param b deuxieme operande.
+   * @return le resultat d'addition.
    */
-  public int apply(int a, int b) {
-    return a+b;
+  public int apply(final int a, final int b) {
+    return a + b;
   }
 }

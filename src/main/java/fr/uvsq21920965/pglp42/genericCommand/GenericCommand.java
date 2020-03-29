@@ -9,6 +9,6 @@ public interface GenericCommand {
   /**
    * appliquer la commande genirique exit/undo.
    */
-  public void apply();
+  void apply();
 
 }

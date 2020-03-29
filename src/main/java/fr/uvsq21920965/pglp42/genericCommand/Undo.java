@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author Sarra Belmahdi.
  *
  */
-public class Undo implements  GenericCommand{
+public class Undo implements  GenericCommand {
   /**
    * pile pour empiler les operandes.
    */
@@ -16,15 +16,16 @@ public class Undo implements  GenericCommand{
    * pile pour empiler l'historiques des piles.
    */
   private Stack<Stack<Integer>> allPiles;
- 
+
   /**
    * Constructeur.
    * @param operandesPileAtt pile pour empiler les operandes.
    * @param allPilesAtt  pile pour empiler l'historiques des piles.
    */
-  public Undo(Stack<Integer> operandesPileAtt, Stack<Stack<Integer>> allPilesAtt) {
+  public Undo(final Stack<Integer> operandesPileAtt,
+    final Stack<Stack<Integer>> allPilesAtt) {
     operandesPile = operandesPileAtt;
-    allPiles=allPilesAtt;
+    allPiles = allPilesAtt;
   }
 
   /**
@@ -32,9 +33,9 @@ public class Undo implements  GenericCommand{
    */
   public void apply() {
     operandesPile.clear();
-    if (! allPiles.empty()) {
+    if (!allPiles.empty()) {
       allPiles.pop();
-        if (! allPiles.empty()) {
+        if (!allPiles.empty()) {
           Stack<Integer> actuelPile =  allPiles.peek();
           for (int i = 0; i < actuelPile.size(); i++) {
             if (actuelPile.get(i) != null) {
@@ -42,8 +43,7 @@ public class Undo implements  GenericCommand{
             }
           }
         }
-      }
-      else {
+      } else {
         System.out.println("il n'y a pas une operation à annuler");
     }
   }

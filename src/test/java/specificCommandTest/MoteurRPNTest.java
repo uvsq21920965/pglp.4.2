@@ -62,9 +62,9 @@ public class MoteurRPNTest {
 		expectedPile.push(5);
 		assertEquals(mrpn.getOperandesPile(),expectedPile);
 		mrpn.calcule("-");
-		assertTrue(mrpn.getOperandesPile().contains(4));
+		assertTrue(mrpn.getOperandesPile().contains(-4));
 		expectedPile=new Stack<Integer>();
-		expectedPile.push(4);
+		expectedPile.push(-4);
 		assertEquals(mrpn.getOperandesPile(),expectedPile);
 		
 	}
