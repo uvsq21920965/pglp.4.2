@@ -77,7 +77,7 @@ public class MoteurRPN extends Interpreteur {
   /**
    * methode pour executer les specifiques commandes selon l'operation.
    * @param op le nom de specifique commande.
-   * @throws ExpressionException exception déclanchée.
+   * @throws ExpressionException exception déclanchée
    * si l'expression post-fixé est erronée.
    */
   public void calcule(final String op)throws ExpressionException {

@@ -9,7 +9,18 @@ public enum CalculatriceRPN {
   /**
    * main programme.
    */
-  main;
+  MAIN;
+
+  /**
+   * methode pour executer.
+   * @throws ExpressionException exception déclanchée
+   * si l'expression post-fixé est erronée.
+   */
+  public void execute() throws ExpressionException {
+    SaisieRPN srpn = new SaisieRPN();
+    srpn.interactUser();
+  }
+
   /**
    * main programme.
    * @param args main program args.
@@ -17,7 +28,6 @@ public enum CalculatriceRPN {
    * si l'expression post-fixée est erronée.
    */
   public static void main(final String[] args)throws ExpressionException {
-    SaisieRPN srpn = new SaisieRPN();
-    srpn.interactUser();
+    CalculatriceRPN.MAIN.execute();
   }
 }
