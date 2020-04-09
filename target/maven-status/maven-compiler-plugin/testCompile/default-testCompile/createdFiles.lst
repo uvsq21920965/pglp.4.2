@@ -1,0 +1,8 @@
+genericCommandTest/UndoTest.class
+specificCommandTest/DivisionTest.class
+genericCommandTest/QuitTest.class
+specificCommandTest/SoustractionTest.class
+genericCommandTest/InterpreteurTest.class
+specificCommandTest/MultiplicationTest.class
+specificCommandTest/AdditionTest.class
+specificCommandTest/MoteurRPNTest.class

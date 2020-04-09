@@ -1,0 +1,18 @@
+#Thu Apr 09 00:57:14 CEST 2020
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/package-info.java=1585520146000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/genericommand/GenericCommand.java=1585515582000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/genericommand/Undo.java=1585520118000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/specificommand/SpecificCommand.java=1585515675000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/MoteurRpn.java=1585515736000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/Interpreteur.java=1585515505000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/specificommand/Multiplication.java=1585515821000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/specificommand/Addition.java=1585520412000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/SaisieRpn.java=1585514883000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/genericommand/Quit.java=1585515589000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/specificommand/package-info.java=1585520493000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/ExpressionException.java=1585476615000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/specificommand/Soustraction.java=1585520456000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/specificommand/Division.java=1585520429000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/CalculatriceRpn.java=1585513350000
+/home/oem/git/pglp_4.2/src/main/java/fr/uvsq21920965/pglp42/genericommand/package-info.java=1585520309000
+configuration*?=BF63D2AE51DBBD463D0EE504736915DF8C309FB9
